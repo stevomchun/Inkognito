@@ -10,13 +10,9 @@
 	<title>Inkognito</title>
 
 	<style>
-		@import 'ui/css/evothings-app.css';
+		@import 'ui/css/app.css';
 	</style>
 
-	<script>
-	// Redirect console.log to Evothings Workbench.
-	if (window.hyper && window.hyper.log) { console.log = hyper.log }
-	</script>
     <script>
         function roll() {
             var x, y, z;
@@ -81,11 +77,6 @@
         <div class="ball" id="nr3"></div>
     </div>
 	<input class="but" type="button" value="Roll" onclick="roll();">
-	<script src="cordova.js"></script>
-	<script src="libs/evothings/evothings.js"></script>
-	<script src="libs/evothings/ui/ui.js"></script>
-	<!-- TODO: Add libraries that you need -->
-
 </body>
 
 </html>
