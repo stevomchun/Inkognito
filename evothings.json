@@ -1,0 +1,17 @@
+{
+  "name": "inkognito",
+  "version": "1.0",
+  "title": "Basic Template App",
+  "description": "This is an app for inkognito board game.",
+  "tags": [],
+  "libraries": [
+    {
+      "name": "jquery",
+      "version": "2.1.1"
+    }
+  ],
+  "index-file": "index.html",
+  "uuid": "b350bf3d-4e00-47b7-8cbc-712bafae337e",
+  "icon": "app-icon.png",
+  "doc-url": "https://evothings.com/2.1/doc/examples/template-basic-app.html"
+}

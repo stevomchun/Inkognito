@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Inkognito</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+    <script>
+        function roll() {
+            var x, y, z;
+                x = Math.floor((Math.random() * 10) + 1);
+                
+                do {
+                    y = Math.floor((Math.random() * 10) + 1);
+                } while (x == y);
+                
+                do {
+                    z = Math.floor((Math.random() * 10) + 1);
+                } while ((x == z)||(y==z));
+                document.getElementById('nr1').style.backgroundColor = getColor(x);   
+                document.getElementById('nr2').style.backgroundColor = getColor(y);   
+                document.getElementById('nr3').style.backgroundColor = getColor(z);  
+        return false;}
+        
+        function getColor(nr) {  //nr 0 to 10
+            var color;
+            switch(nr) {
+            case 1:
+                color="#6adeff";
+            break;
+            case 2:
+                color="#6adeff";
+            break;
+            case 3:
+                color="#c600ff";
+            break;
+            case 4:
+                color="#ffffff";
+            break;
+            case 5:
+                color="#000000";
+            break;
+            case 6:
+                color="#000000";
+            break;
+            case 7:
+                color="#ffaa00";
+            break;
+            case 8:
+                color="#ffaa00";
+            break;
+            case 9:
+                color="#ffffff";
+            break;
+            default:
+                color="#ffffff";
+            }
+        return color;
+        }
+    </script>
+
+</head>
+
+<body onload="roll()"ontouchstart=""><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+    <div class="balls_container">
+        <div class="ball" id="nr1"></div>
+        <div class="ball" id="nr2"></div>
+        <div class="ball" id="nr3"></div>
+    </div>
+	<input class="but" type="button" value="Roll" onclick="roll();">
+	<script src="cordova.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<!-- TODO: Add libraries that you need -->
+
+</body>
+
+</html>
